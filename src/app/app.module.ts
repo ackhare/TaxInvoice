@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaxRegistrationComponent } from './taxRegistration/tax-registration.component';
+import { TaxFormComponent } from './taxRegistrationForm/tax-form.component';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -16,10 +18,12 @@ import { OverlayModule } from '@angular/cdk/overlay';
 @NgModule({
   declarations: [
     AppComponent,
-    TaxRegistrationComponent
+    TaxRegistrationComponent,
+    TaxFormComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

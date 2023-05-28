@@ -1,0 +1,202 @@
+<form [formGroup]="taxForm" (ngSubmit)="onSubmit()">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Basic Salary</mat-label>
+        <input matInput formControlName="basic" name="basic">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>House Rent Allowance</mat-label>
+        <input matInput formControlName="houseRent" name="houseRent">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Special Allowance</mat-label>
+        <input matInput formControlName="specialAllowance" name="specialAllowance">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Gross Salary</mat-label>
+        <input matInput formControlName="grossSalary" name="grossSalary">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Exemption U/S 10</mat-label>
+        <input matInput formControlName="exemptionUs10" name="exemptionUs10">
+      </mat-form-field>
+    </div>
+
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Net Salary</mat-label>
+        <input matInput formControlName="netSalary" name="netSalary">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Less: Deduction U/s 16</mat-label>
+        <input matInput formControlName="lessDeductionUs16" name="lessDeductionUs16">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Tax on Employment (Professional Tax)</mat-label>
+        <input matInput formControlName="professionalTax" name="professionalTax">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Standard Deduction</mat-label>
+        <input matInput formControlName="standardDeduction" name="deduction">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Net Taxable Salary</mat-label>
+        <input matInput formControlName="netTaxable" name="netTaxable">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Income Loss from House property</mat-label>
+        <input matInput formControlName="incomeLossHouseProperty" name="incomeLossHouseProperty">
+      </mat-form-field>
+    </div>
+
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>NSC Accrued Interest</mat-label>
+        <input matInput formControlName="nsc" name="nsc">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Income from Other Sources</mat-label>
+        <input matInput formControlName="incomeOtherSources" name="incomeOtherSources">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Interest from Savings Bank Account</mat-label>
+        <input matInput formControlName="intrestFromSavingsBank" name="intrestFromSavingsBank">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Interest on Fixed Deposits</mat-label>
+        <input matInput formControlName="intrestsOnFixedDeposits" name="intrestsOnFixedDeposits">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label> Gross Total Income</mat-label>
+        <input matInput formControlName="grossTotalIncome" name="grossTotalIncome">
+      </mat-form-field>
+    </div>
+   
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Less: CHAPTER_VI A</mat-label>
+        <input matInput formControlName="lessChapter4A" name="lessChapter4A">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label> Taxable Income</mat-label>
+        <input matInput formControlName="taxableIncome" name="taxableIncome">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Tax Payable</mat-label>
+        <input matInput formControlName="taxPayable" name="taxPayable">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Tax After Rebate</mat-label>
+        <input matInput formControlName="taxAfterRebate" name="taxAfterRebate">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Less: Rebate under Sec 87A</mat-label>
+        <input matInput formControlName="lessRebate87" name="lessRebate87">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Add: Surcharge</mat-label>
+        <input matInput formControlName="addSurcharge" name="addSurcharge">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Tax After Surcharge</mat-label>
+        <input matInput formControlName="taxAfterSurcharge" name="taxAfterSurcharge">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Add: Education Cess</mat-label>
+        <input matInput formControlName="addEduCess" name="addEduCess">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label> Total Tax Payable</mat-label>
+        <input matInput formControlName="totalTaxPayable" name="totalTaxPayable">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Less: TDS Deducted Till Previous Month</mat-label>
+        <input matInput formControlName="lessTdsPreviousMonth" name="lessTdsPreviousMonth">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Less: TDS from Previous Employment</mat-label>
+        <input matInput formControlName="lessTdsPreviousEmp" name="lessTdsPreviousEmp">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>ESOP TAX</mat-label>
+        <input matInput formControlName="esop" name="esop">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Balance Tax Payable for the Year</mat-label>
+        <input matInput formControlName="balanceTaxPayable" name="balanceTaxPayable">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>One Time Tax for the Month</mat-label>
+        <input matInput formControlName="oneTimeTax" name="oneTimeTax">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Average Monthly Tax</mat-label>
+        <input matInput formControlName="avgMonthlyTax" name="avgMonthlyTax">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Tax Deducted In Current Month</mat-label>
+        <input matInput formControlName="finalTaxDeduction" name="finalTaxDeduction">
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%">
+        <button mat-stroked-button color="primary" type="submit" [disabled]="!taxForm.valid">Submit<mat-icon>chevron_right</mat-icon></button>
+    </div>
+  </div>
+</form>

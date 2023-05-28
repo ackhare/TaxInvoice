@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { TaxFormComponent } from './taxRegistrationForm/tax-form.component';
 import { TaxRegistrationComponent } from './taxRegistration/tax-registration.component';
 const appRoutes: Routes = [
-  { path: 'tax-registration',      component: TaxRegistrationComponent }
+  { path: 'tax-registration',      component: TaxFormComponent }
   ,
   { path: '',
     redirectTo: '/app-route',
