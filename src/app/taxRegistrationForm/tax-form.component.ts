@@ -11,10 +11,10 @@ export class TaxFormComponent  {
   }
 
   taxForm = new FormGroup({
-    basic: new FormControl('', [Validators.required]),
-    houseRent: new FormControl('', [Validators.required]),
+    basicSalary: new FormControl('', [Validators.required]),
+    houseRentAllowance: new FormControl('', [Validators.required]),
     specialAllowance: new FormControl('', [Validators.required]),
-    grossSalary: new FormControl('', Validators.required),
+    fixedSalary: new FormControl('', Validators.required),
     exemptionUs10: new FormControl('', Validators.required),
     netSalary: new FormControl('', Validators.required),
     lessDeductionUs16: new FormControl('', Validators.required),
@@ -48,8 +48,8 @@ export class TaxFormComponent  {
 
   onSubmit(): void {
     const val = this.taxForm.value;
-    let bodyString = JSON.stringify({  basic: val.basic,  houseRent: val.houseRent,  specialAllowance: val.specialAllowance, 
-      grossSalary:val.grossSalary,exemptionUs10:val.exemptionUs10,netSalary:val.netSalary,lessDeductionUs16:val.lessDeductionUs16,
+    let bodyString = JSON.stringify({  basicSalary: val.basicSalary,  houseRentAllowance: val.houseRentAllowance,  specialAllowance: val.specialAllowance, 
+      fixedSalary:val.fixedSalary,exemptionUs10:val.exemptionUs10,netSalary:val.netSalary,lessDeductionUs16:val.lessDeductionUs16,
       professionalTax:val.professionalTax,standardDeduction:val.standardDeduction,netTaxable:val.netTaxable,
       incomeLossHouseProperty:val.incomeLossHouseProperty,nsc:val.nsc,incomeOtherSources:val.incomeOtherSources,
       intrestFromSavingsBank:val.intrestFromSavingsBank,intrestsOnFixedDeposits:val.intrestsOnFixedDeposits,
@@ -61,9 +61,9 @@ export class TaxFormComponent  {
       oneTimeTax:val.oneTimeTax,avgMonthlyTax:val.avgMonthlyTax,finalTaxDeduction:val.finalTaxDeduction
     });
     let headers = new HttpHeaders({ 'Content-Type': 'application/JSON' });
-   this.http.post('url', bodyString, { headers })
+   this.http.post('https://tax-invoice-service.onrender.com/income-tax/calculate-tax', bodyString, { headers })
       .subscribe(response => {
-
+          console.info(response);
       });
   }
 
