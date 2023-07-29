@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TaxFormComponent } from './taxRegistrationForm/tax-form.component';
 import { TaxRegistrationComponent } from './taxRegistration/tax-registration.component';
 const appRoutes: Routes = [
-  { path: 'tax-registration',      component: TaxFormComponent }
+  { path: '',      component: TaxFormComponent }
   ,
   { path: '',
     redirectTo: '/app-route',

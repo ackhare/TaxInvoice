@@ -15,6 +15,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { MatRadioModule } from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,10 @@ MatToolbarModule,
 MatIconModule,
 MatCardModule,
 MatInputModule,
+MatRadioModule,
+MatSelectModule,
 BrowserAnimationsModule,
+MatFormFieldModule,
 OverlayModule // check https://github.com/angular/material2/issues/10820
   ],
   providers: [],
