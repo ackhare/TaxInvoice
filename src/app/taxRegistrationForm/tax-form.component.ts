@@ -83,7 +83,34 @@ export class TaxFormComponent  {
     const val = this.taxForm.value;
     let bodyString = JSON.stringify({  basicSalary: val.basicSalary,  houseRentAllowance: val.houseRentAllowance,  flexiSalary: val.flexiSalary, 
       fixedSalary:val.fixedSalary,leaveTravelAllowance:val.leaveTravelAllowance,dearnessAllowance:val.dearnessAllowance,age:val.age,
-      nationalPensionScheme:val.nationalPensionScheme,taxRegimeOption:val.taxRegimeOption ,taxPayer:val.taxPayer});
+      nationalPensionScheme:val.nationalPensionScheme,taxRegimeOption:val.taxRegimeOption ,taxPayer:val.taxPayer,
+      investment80C:val.investment80C,
+      insurancePremium80CCC : val.insurancePremium80CCC,
+      pensionContribution80CCD : val.pensionContribution80CCD,
+      interestOnSavingAccount80TTA : val.interestOnSavingAccount80TTA,
+       houseRentPaid80GG  : val.houseRentPaid80GG,
+      interestOnEducationLoan80E : val.interestOnEducationLoan80E,
+  
+      interestOnHomeLoan80EE : val.interestOnHomeLoan80EE,
+  
+      medicalInsurance80D : val.medicalInsurance80D,
+  
+      disabledDependent80DD : val.disabledDependent80DD,
+  
+       medicalExpenditure80DDB : val.medicalExpenditure80DDB,
+  
+       physicalDisability80U : val.physicalDisability80U,
+  
+       donations80G : val.donations80G,
+  
+       companyContribution80GGB : val.companyContribution80GGB,
+  
+      contributionToPoliticalParties80GGC : val.contributionToPoliticalParties80GGC,
+  
+      royaltyOfPatent80RRB : val.royaltyOfPatent80RRB,
+  
+       interestIncome80TTB : val.interestIncome80TTB,
+    });
     let headers = new HttpHeaders({ 'Content-Type': 'application/JSON' });
    this.http.post('https://tax-invoice-service.onrender.com/income-tax/calculate-tax', bodyString, { headers })
       .subscribe(response => {
@@ -93,5 +120,8 @@ export class TaxFormComponent  {
   open() {
    this.is80Cvisible=true;
   }
-
+  close() {
+    this.is80Cvisible=false;
+   }
+ 
 }
