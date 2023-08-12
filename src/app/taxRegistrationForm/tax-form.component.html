@@ -1,67 +1,67 @@
-<div fxLayout="row" style=" margin-top: 10px;
-margin-bottom: 10px;" flex fxLayoutGap="10px">
+<!-- <div fxLayout="row" style=" margin-top: 10px;
 
-
+margin-bottom: 10px;" flex fxLayoutGap="10px"> -->
+<div class="example-container" >
 <form [formGroup]="taxForm" (ngSubmit)="onSubmit()">
-  <div fxLayout="column" fxLayoutAlign="center center">
-    <div fxFlex="100%">
+  <div class="example-form-fields">
+
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Basic Salary</mat-label>
         <input matInput formControlName="basicSalary" name="basicSalary">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>House Rent Allowance</mat-label>
         <input matInput formControlName="houseRentAllowance" name="houseRentAllowance">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+   
+  
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Leave Travel Allowance</mat-label>
         <input matInput formControlName="leaveTravelAllowance" name="leaveTravelAllowance">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
       <mat-form-field appearance="outline" class="form-field">
-        <mat-label>Gross Salary</mat-label>
+        <mat-label>Fixed Salary</mat-label>
         <input matInput formControlName="fixedSalary" name="fixedSalary">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+</div>
+<div class="example-form-fields">
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Dearness Allowance</mat-label>
         <input matInput formControlName="dearnessAllowance" name="dearnessAllowance">
       </mat-form-field>
-    </div>
+   
 
-    <div fxFlex="100%">
+ 
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>|Flexi Salary</mat-label>
         <input matInput formControlName="flexiSalary" name="flexiSalary">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+   
+
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>National Pension Scheme</mat-label>
         <input matInput formControlName="nationalPensionScheme" name="nationalPensionScheme">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+   
+   
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Age</mat-label>
         <input matInput formControlName="age" name="age">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
-     
+   
+  </div>
+  <div class="example-form-fields">
+   
     <mat-radio-group matInput aria-label="Select Regime" formControlName="taxRegimeOption">
      
       <mat-radio-button value="old">Old Regime</mat-radio-button>
       <mat-radio-button value="new">New Regime</mat-radio-button>
   
     </mat-radio-group>
-    <h4>Tax payer</h4>
+
+    <div style="margin-left:12px"> 
+    <!-- <h4>Tax payer</h4> -->
     <mat-form-field>
       <mat-label>Tax Payer</mat-label>
       <mat-select formControlName="taxPayer">
@@ -70,9 +70,10 @@ margin-bottom: 10px;" flex fxLayoutGap="10px">
         <mat-option value="company">Company</mat-option>
       </mat-select>
     </mat-form-field>
-    
   </div>
-  <div fxFlex="100%" flex fxLayoutGap="10px">
+  </div>
+  <div class="example-form-fields">
+
   <a *ngIf="is80Cvisible===false" style=" margin-top: 10px;
   margin-bottom: 10px;" href="javascript:void(0)"(click)="open()">Open 80C</a>
     <a *ngIf="is80Cvisible===true" style=" margin-top: 10px;
@@ -81,108 +82,97 @@ margin-bottom: 10px;" flex fxLayoutGap="10px">
 
   <div *ngIf="is80Cvisible===true" style=" margin-top: 10px;
   margin-bottom: 10px;">
-    <div fxFlex="100%">
+  <div class="example-form-fields">
+   
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Investment 80C</mat-label>
         <input matInput formControlName="investment80C" name="investment80C">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+  
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Insurance Premium 80CC</mat-label>
         <input matInput formControlName="insurancePremium80CCC" name="insurancePremium80CCC">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+   
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Pension Contribution 80CCD</mat-label>
         <input matInput formControlName="pensionContribution80CCD" name="pensionContribution80CCD">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Intrest On Saving Account 80 TTA</mat-label>
         <input matInput formControlName="interestOnSavingAccount80TTA" name="interestOnSavingAccount80TTA">
       </mat-form-field>
     </div>
-    <div fxFlex="100%">
+    <div class="example-form-fields">
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>HouseRent Paid80 GG</mat-label>
         <input matInput formControlName="houseRentPaid80GG" name="houseRentPaid80GG">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Intrest On Education Loan 80 E</mat-label>
         <input matInput formControlName="interestOnEducationLoan80E" name="interestOnEducationLoan80E">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+   
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Intrest On Home Loan 80 EE</mat-label>
         <input matInput formControlName="interestOnHomeLoan80EE" name="interestOnHomeLoan80EE">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Medical Insurance 80D</mat-label>
         <input matInput formControlName="medicalInsurance80D" name="medicalInsurance80D">
       </mat-form-field>
     </div>
-
-    <div fxFlex="100%">
+    <div class="example-form-fields">
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Disabled Dependent 80DD</mat-label>
         <input matInput formControlName="disabledDependent80DD" name="disabledDependent80DD">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+   
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Medical Expenditure 80 DDB</mat-label>
         <input matInput formControlName="medicalExpenditure80DDB" name="medicalExpenditure80DDB">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+  
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Physical Disability 80 U</mat-label>
         <input matInput formControlName="physicalDisability80U" name="physicalDisability80U">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+   
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Donations 80G</mat-label>
         <input matInput formControlName="donations80G" name="donations80G">
       </mat-form-field>
     </div>
-    <div fxFlex="100%">
+    <div class="example-form-fields">
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Company contributions 80 GGB</mat-label>
         <input matInput formControlName="companyContribution80GGB" name="companyContribution80GGB">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+  
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Contribution To Political Parties 80 GGC</mat-label>
         <input matInput formControlName="contributionToPoliticalParties80GGC" name="contributionToPoliticalParties80GGC">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+   
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Royality Of Patent 80 RRB</mat-label>
         <input matInput formControlName="royaltyOfPatent80RRB" name="royaltyOfPatent80RRB">
       </mat-form-field>
-    </div>
-    <div fxFlex="100%">
+   
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Intrest Income 80 TTB</mat-label>
         <input matInput formControlName="interestIncome80TTB" name="interestIncome80TTB">
       </mat-form-field>
     </div>
-  </div>
-    <div fxFlex="100%"  style=" margin-top: 22px;
+    <div class="example-form-fields" style=" margin-top: 22px;
     margin-bottom: 10px;">
         <button mat-stroked-button color="primary" type="submit" [disabled]="!taxForm.valid">Submit</button>
-    </div>
-  </div>
+        <button style="margin-left:3%" mat-stroked-button color="primary" type="reset">Clear</button>
+
+      </div>
+  </div> 
+
 </form>
 </div>

@@ -13,45 +13,45 @@ export class TaxFormComponent  {
   }
   is80Cvisible= false;
   taxForm = new FormGroup({
-    basicSalary: new FormControl('', [Validators.required]),
-    fixedSalary: new FormControl('', Validators.required),
+    basicSalary: new FormControl(''),
+    fixedSalary: new FormControl('',[Validators.required]),
     houseRentAllowance: new FormControl('', [Validators.required]),
-    leaveTravelAllowance: new FormControl('', [Validators.required]),
+    leaveTravelAllowance: new FormControl(''),
    
-    dearnessAllowance: new FormControl('', Validators.required),
-    flexiSalary: new FormControl('', Validators.required),
-    age: new FormControl('', Validators.required),
-    nationalPensionScheme: new FormControl('', Validators.required),
+    dearnessAllowance: new FormControl(''),
+    flexiSalary: new FormControl(''),
+    age: new FormControl('',Validators.required),
+    nationalPensionScheme: new FormControl(''),
     taxRegimeOption : new FormControl('', Validators.required),
     taxPayer : new FormControl('', Validators.required)
 ,
 //80 c 
-    investment80C : new FormControl('', Validators.required),
-    insurancePremium80CCC : new FormControl('', Validators.required),
-    pensionContribution80CCD : new FormControl('', Validators.required),
-    interestOnSavingAccount80TTA : new FormControl('', Validators.required),
-     houseRentPaid80GG  : new FormControl('', Validators.required),
-    interestOnEducationLoan80E : new FormControl('', Validators.required),
+    investment80C : new FormControl(''),
+    insurancePremium80CCC : new FormControl(''),
+    pensionContribution80CCD : new FormControl(''),
+    interestOnSavingAccount80TTA : new FormControl(''),
+     houseRentPaid80GG  : new FormControl(''),
+    interestOnEducationLoan80E : new FormControl(''),
 
-    interestOnHomeLoan80EE : new FormControl('', Validators.required),
+    interestOnHomeLoan80EE : new FormControl(''),
 
-    medicalInsurance80D : new FormControl('', Validators.required),
+    medicalInsurance80D : new FormControl(''),
 
-    disabledDependent80DD : new FormControl('', Validators.required),
+    disabledDependent80DD : new FormControl(''),
 
-     medicalExpenditure80DDB : new FormControl('', Validators.required),
+     medicalExpenditure80DDB : new FormControl(''),
 
-     physicalDisability80U : new FormControl('', Validators.required),
+     physicalDisability80U : new FormControl(''),
 
-     donations80G : new FormControl('', Validators.required),
+     donations80G : new FormControl(''),
 
-     companyContribution80GGB : new FormControl('', Validators.required),
+     companyContribution80GGB : new FormControl(''),
 
-    contributionToPoliticalParties80GGC : new FormControl('', Validators.required),
+    contributionToPoliticalParties80GGC : new FormControl(''),
 
-    royaltyOfPatent80RRB : new FormControl('', Validators.required),
+    royaltyOfPatent80RRB : new FormControl(''),
 
-     interestIncome80TTB : new FormControl('', Validators.required),
+     interestIncome80TTB : new FormControl(''),
     // standardDeduction: new FormControl('', Validators.required),
     // netTaxable: new FormControl('', Validators.required),
     // incomeLossHouseProperty: new FormControl('', Validators.required),
