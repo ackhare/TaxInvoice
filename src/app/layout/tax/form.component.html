@@ -1,0 +1,145 @@
+<div [@routerTransition]>
+    <!-- <app-page-header [heading]="'Tax Invoice'" [icon]="'fa-edit'"></app-page-header> -->
+
+    <div _ngcontent-woy-c3="" class="col-xl-12"><h2 _ngcontent-woy-c3="" class="page-header"> Tax Invoice </h2>
+   </div>
+        <form [formGroup]="taxForm"  (ngSubmit)="onSubmit()">
+            <div class="row g-3">
+            <div class="col-md-3">
+                <label class="form-label">Basic Salary</label>
+                <input type="text" class="form-control"   formControlName="basicSalary" name="basicSalary">
+              </div>
+              <div class="col-md-3 form-group">
+                <label class="form-label">House Rent Allowance <span class="req">*</span></label>
+                <input type="text" class="form-control"  required formControlName="houseRentAllowance" name="houseRentAllowance">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Leave Travel Allowance</label>
+                <input type="text" class="form-control"   formControlName="leaveTravelAllowance" name="leaveTravelAllowance">
+              </div>
+              <div class="col-md-3">
+                <label  class="form-label">Fixed Salary<span class="req">*</span></label>
+                <input type="text" class="form-control"  required formControlName="fixedSalary" name="fixedSalary">
+              </div>
+              <div class="col-md-3">
+                <label  class="form-label">Dearness Allowance</label>
+                <input type="text" class="form-control"   formControlName="dearnessAllowance" name="dearnessAllowance">
+ 
+              </div>
+              <div class="col-md-3">
+                <label for="validationDefault05" class="form-label">Flexi Salary</label>
+                <input type="text" class="form-control"   formControlName="flexiSalary" name="flexiSalary">
+              </div>
+              <div class="col-md-3">
+                <label for="validationDefault05" class="form-label">National Pension Scheme</label>
+                <input type="text" class="form-control"  formControlName="nationalPensionScheme" name="nationalPensionScheme">
+              </div>
+              <div class="col-md-3">
+                <label for="validationDefault05" class="form-label">Age<span class="req">*</span></label>
+                <input type="text" class="form-control" required formControlName="age" name="age">
+              </div>
+              <div class="col-md-3">
+                <label class="radio-inline">
+                <input formControlName="taxRegimeOption" name="radioGroup" id="radio1" value="option1" type="radio"> Old Regime
+              </label>
+              <label class="radio-inline" style="margin-left:2%">
+                <input formControlName="taxRegimeOption" name="radioGroup" id="radio2" value="option2" checked="" type="radio"> New Regime
+              </label>
+              </div>
+             <div class="col-md-3">
+                <label>Tax Payer<span class="req">*</span></label>
+                <select class="form-control" required>
+                    <option value="Individual">Individual</option>
+                    <option class="HUF">HUF</option>
+                    <option class="Company">Company</option>
+            
+                </select>
+             </div>
+            </div>
+            <div class="row g-3" style=" margin-top: 10px;
+            margin-bottom: 10px;">
+                <a *ngIf="is80Cvisible===false" style=" margin-top: 10px;
+                margin-bottom: 10px;" href="javascript:void(0)"(click)="open()">Open 80C</a>
+                  <a *ngIf="is80Cvisible===true" style=" margin-top: 10px;
+                  margin-bottom: 10px;" href="javascript:void(0)"(click)="close()">Close 80C</a>
+               
+            </div>
+            <div *ngIf="is80Cvisible===true" style=" margin-top: 10px;
+            margin-bottom: 10px;">
+             <div class="row g-3">
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Investment 80C</label>
+                    <input type="text" class="form-control"  formControlName="investment80C" name="investment80C">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Insurance Premium 80CC</label>
+                    <input type="text" class="form-control"  formControlName="insurancePremium80CCC" name="insurancePremium80CCC">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Pension Contribution 80CCD</label>
+                    <input type="text" class="form-control"  formControlName="pensionContribution80CCD" name="pensionContribution80CCD">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Intrest On Saving Account 80 TTA</label>
+                    <input type="text" class="form-control"  formControlName="interestOnSavingAccount80TTA" name="interestOnSavingAccount80TTA">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">HouseRent Paid80 GG</label>
+                    <input type="text" class="form-control"   formControlName="houseRentPaid80GG" name="houseRentPaid80GG">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Intrest On Education Loan 80 E</label>
+                    <input type="text" class="form-control"  formControlName="interestOnEducationLoan80E" name="interestOnEducationLoan80E">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Intrest On Home Loan 80 EE</label>
+                    <input type="text" class="form-control" formControlName="interestOnHomeLoan80EE" name="interestOnHomeLoan80EE">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Medical Insurance 80D</label>
+                    <input type="text" class="form-control" formControlName="medicalInsurance80D" name="medicalInsurance80D">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Disabled Dependent 80DD</label>
+                    <input type="text" class="form-control" formControlName="disabledDependent80DD" name="disabledDependent80DD">     
+                </div>
+                              
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Medical Expenditure 80 DDB</label>
+                    <input type="text" class="form-control"  formControlName="medicalExpenditure80DDB" name="medicalExpenditure80DDB">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Physical Disability 80 U</label>
+                    <input type="text" class="form-control"  formControlName="physicalDisability80U" name="physicalDisability80U">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Donations 80G</label>
+                    <input type="text" class="form-control"  formControlName="donations80G" name="donations80G">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Company contributions 80 GGB</label>
+                    <input type="text" class="form-control"  formControlName="companyContribution80GGB" name="companyContribution80GGB">     
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Contribution To Political Parties 80 GGC</label>
+                    <input type="text" class="form-control"  formControlName="contributionToPoliticalParties80GGC" name="contributionToPoliticalParties80GGC">    
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Royality Of Patent 80 RRB</label>
+                    <input type="text" class="form-control"  formControlName="royaltyOfPatent80RRB" name="royaltyOfPatent80RRB">    
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Intrest Income 80 TTB</label>
+                    <input type="text" class="form-control"  formControlName="interestIncome80TTB" name="interestIncome80TTB">   
+                </div>
+            </div> 
+        </div> 
+           
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+            </form>
+        <!-- </div> -->
+    
+    <!-- /.row -->
+</div>
