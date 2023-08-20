@@ -81,35 +81,35 @@ export class TaxFormComponent  {
 
   onSubmit(): void {
     const val = this.taxForm.value;
-    let bodyString = JSON.stringify({  basicSalary: val.basicSalary,  houseRentAllowance: val.houseRentAllowance,  flexiSalary: val.flexiSalary, 
-      fixedSalary:val.fixedSalary,leaveTravelAllowance:val.leaveTravelAllowance,dearnessAllowance:val.dearnessAllowance,age:val.age,
-      nationalPensionScheme:val.nationalPensionScheme,taxRegimeOption:val.taxRegimeOption ,taxPayer:val.taxPayer,
-      investment80C:val.investment80C,
-      insurancePremium80CCC : val.insurancePremium80CCC,
-      pensionContribution80CCD : val.pensionContribution80CCD,
-      interestOnSavingAccount80TTA : val.interestOnSavingAccount80TTA,
-       houseRentPaid80GG  : val.houseRentPaid80GG,
-      interestOnEducationLoan80E : val.interestOnEducationLoan80E,
+    let bodyString = JSON.stringify({  basicSalary: parseFloat(val.basicSalary!),  houseRentAllowance:  parseFloat(val.houseRentAllowance!),  flexiSalary:  parseFloat(val.flexiSalary!), 
+      fixedSalary: parseFloat(val.fixedSalary!),leaveTravelAllowance: parseFloat(val.leaveTravelAllowance!),dearnessAllowance: parseFloat(val.dearnessAllowance!),age:parseFloat(val.age!),
+      nationalPensionScheme:parseFloat(val.nationalPensionScheme!),taxRegimeOption:val.taxRegimeOption ,taxPayer:val.taxPayer,
+      investment80C:parseFloat(val.investment80C!),
+      insurancePremium80CCC : parseFloat(val.insurancePremium80CCC!),
+      pensionContribution80CCD : parseFloat(val.pensionContribution80CCD!),
+      interestOnSavingAccount80TTA : parseFloat(val.interestOnSavingAccount80TTA!),
+       houseRentPaid80GG  : parseFloat(val.houseRentPaid80GG!),
+      interestOnEducationLoan80E : parseFloat(val.interestOnEducationLoan80E!),
   
-      interestOnHomeLoan80EE : val.interestOnHomeLoan80EE,
+      interestOnHomeLoan80EE : parseFloat(val.interestOnHomeLoan80EE!),
   
-      medicalInsurance80D : val.medicalInsurance80D,
+      medicalInsurance80D : parseFloat(val.medicalInsurance80D!),
   
-      disabledDependent80DD : val.disabledDependent80DD,
+      disabledDependent80DD : parseFloat(val.disabledDependent80DD!),
   
-       medicalExpenditure80DDB : val.medicalExpenditure80DDB,
+       medicalExpenditure80DDB : parseFloat(val.medicalExpenditure80DDB!),
   
-       physicalDisability80U : val.physicalDisability80U,
+       physicalDisability80U : parseFloat(val.physicalDisability80U!),
   
-       donations80G : val.donations80G,
+       donations80G : parseFloat(val.donations80G!),
   
-       companyContribution80GGB : val.companyContribution80GGB,
+       companyContribution80GGB : parseFloat(val.companyContribution80GGB!),
   
-      contributionToPoliticalParties80GGC : val.contributionToPoliticalParties80GGC,
+      contributionToPoliticalParties80GGC : parseFloat(val.contributionToPoliticalParties80GGC!),
   
-      royaltyOfPatent80RRB : val.royaltyOfPatent80RRB,
+      royaltyOfPatent80RRB : parseFloat(val.royaltyOfPatent80RRB!),
   
-       interestIncome80TTB : val.interestIncome80TTB,
+       interestIncome80TTB : parseFloat(val.interestIncome80TTB!),
     });
     let headers = new HttpHeaders({ 'Content-Type': 'application/JSON' });
    this.http.post('https://tax-invoice-service.onrender.com/income-tax/calculate-tax', bodyString, { headers })
