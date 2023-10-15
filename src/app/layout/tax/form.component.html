@@ -40,15 +40,15 @@
               </div>
               <div class="col-md-3">
                 <label class="radio-inline">
-                <input formControlName="taxRegimeOption" name="radioGroup" id="radio1" value="option1" type="radio"> Old Regime
+                <input formControlName="taxRegimeOption" name="taxRegimeOption" id="radio1" value="Old Regime" type="radio"> Old Regime
               </label>
               <label class="radio-inline" style="margin-left:2%">
-                <input formControlName="taxRegimeOption" name="radioGroup" id="radio2" value="option2" checked="" type="radio"> New Regime
+                <input formControlName="taxRegimeOption" name="taxRegimeOption" id="radio2" value="New Regime" checked="" type="radio"> New Regime
               </label>
               </div>
              <div class="col-md-3">
                 <label>Tax Payer<span class="req">*</span></label>
-                <select class="form-control" required>
+                <select class="form-control" formControlName="taxPayer" name="taxPayer" required>
                     <option value="Individual">Individual</option>
                     <option class="HUF">HUF</option>
                     <option class="Company">Company</option>

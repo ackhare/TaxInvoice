@@ -3,6 +3,7 @@ import { routerTransition } from '../../router.animations';
 import { FormBuilder } from '@angular/forms';
 import { FormArray } from '@angular/forms';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Component({
     selector: 'app-form',
@@ -81,7 +82,7 @@ export class FormComponent {
     
     });
   
-    onSubmit(): void {
+    onSubmit= function () {
       const val = this.taxForm.value;
       let bodyString = JSON.stringify({  basicSalary: parseFloat(val.basicSalary!),  houseRentAllowance:  parseFloat(val.houseRentAllowance!),  flexiSalary:  parseFloat(val.flexiSalary!), 
         fixedSalary: parseFloat(val.fixedSalary!),leaveTravelAllowance: parseFloat(val.leaveTravelAllowance!),dearnessAllowance: parseFloat(val.dearnessAllowance!),age:parseFloat(val.age!),
